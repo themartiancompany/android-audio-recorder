@@ -1,12 +1,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 PREFIX ?= /usr/local
-DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/record-tools
+DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/android-audiorecorder
 BIN_DIR=$(DESTDIR)$(PREFIX)/bin
-DATA_DIR=$(DESTDIR)$(PREFIX)/share/record-tools
+DATA_DIR=$(DESTDIR)$(PREFIX)/share/android-audiorecorder
 
 DOC_FILES=$(wildcard *.rst)
-SCRIPT_FILES=$(wildcard record-tools/*)
+SCRIPT_FILES=$(wildcard android-audiorecorder/*)
 
 all:
 
@@ -24,13 +24,10 @@ install-doc:
 install-scripts:
 
 	install -vdm 755 "$(BIN_DIR)"
-	install -vDm 755 record-tools/audiorecord "$(BIN_DIR)"
-	install -vDm 755 record-tools/camera-mode "$(BIN_DIR)"
-	install -vDm 755 record-tools/record "$(BIN_DIR)"
+	install -vDm 755 android-audiorecorder/android-audiorecorder "$(BIN_DIR)"
 
 install-configs:
 
 	install -vdm 755 "$(DATA_DIR)/configs"
-	install -vDm 755 configs/ffmpeg_options "$(DATA_DIR)/configs"
 
 .PHONY: check install install-configs install-doc install-scripts shellcheck
