@@ -1,12 +1,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 PREFIX ?= /usr/local
-DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/android-audiorecorder
+DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/android-audio-recorder
 BIN_DIR=$(DESTDIR)$(PREFIX)/bin
-DATA_DIR=$(DESTDIR)$(PREFIX)/share/android-audiorecorder
+DATA_DIR=$(DESTDIR)$(PREFIX)/share/android-audio-recorder
 
 DOC_FILES=$(wildcard *.rst)
-SCRIPT_FILES=$(wildcard android-audiorecorder/*)
+SCRIPT_FILES=$(wildcard android-audio-recorder/*)
 
 all:
 
@@ -24,7 +24,7 @@ install-doc:
 install-scripts:
 
 	install -vdm 755 "$(BIN_DIR)"
-	install -vDm 755 android-audiorecorder/android-audiorecorder "$(BIN_DIR)"
+	install -vDm 755 android-audio-recorder/android-audio-recorder "$(BIN_DIR)"
 
 install-configs:
 

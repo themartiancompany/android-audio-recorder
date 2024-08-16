@@ -1,5 +1,5 @@
 ===============
-Record Tools Authors
+Android Audio Recorder Authors
 ===============
 
 * Pellegrino Prevete <pellegrinoprevete@gmail.com>

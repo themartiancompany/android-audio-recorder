@@ -62,7 +62,8 @@ _audiorecord() {
   "${_recorder}" \
     "${_recorder_opts[@]}" \
     -f \
-    "${_out[*]}"
+    "${_out[*]}" || \
+    true
   if [[ "${_method}" == "termux" ]]; then
     sleep \
       "${_length}"
